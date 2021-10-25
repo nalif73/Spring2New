@@ -4,7 +4,7 @@ angular.module('app').controller('productInfoController', function ($scope, $htt
     $scope.loadProduct = function (productId) {
         console.log("call")
         $http({
-            url: "/api/v1/product/" + productId,
+            url: "/api/v1/product/info" + productId,
             method: "GET"
         }).then(function (response) {
             $scope.product = response.data;
@@ -12,7 +12,7 @@ angular.module('app').controller('productInfoController', function ($scope, $htt
         });
     };
 
-    if ($routeParams.productId) {
-        $scope.loadProduct($routeParams.productId)
+   if ($routeParams.productId) {
+    $scope.loadProduct($routeParams.productId)
     }
 });
