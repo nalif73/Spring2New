@@ -32,5 +32,5 @@ angular.module('app').controller('productListController', function ($scope, $htt
             });
     };
 
-    $scope.loadProducts(1)
+     $scope.loadProducts(1)
 });
